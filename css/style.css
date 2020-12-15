@@ -103,7 +103,7 @@ nav {
 
 .social i {
     color: rgba(18, 17, 17, 0.4);
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .social a:hover i {
@@ -158,19 +158,19 @@ nav {
     border-radius: 10px;
     box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.3);
     position: relative;
+    height: 40vh;
 }
 
 .p-b-container {
     width: 90%;
-    height: 95vh;
+    height: 70vh;
     display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px;
+    grid-gap: 15px;
 }
 
 .text-overlay {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     position: absolute;
     left: 0;
     top: 0;
@@ -180,24 +180,46 @@ nav {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgb(180, 180, 180);
+    background-color: rgb(85, 85, 85);
     opacity: 0.5;
     display: none;
 }
 
-.text-overlay p {
-    color: #FFFFFF;
-    font-size: 1.4rem;
-    margin: 0px;
-    letter-spacing: 2px;
-}
-
 .p-box:hover .text-overlay {
     display: flex;
+    cursor: pointer;
 }
 
 .p-box img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.p-info {
+    width: 100%;
+    height: 0%;
+    color: #FFFFFF;
+}
+
+.p-info p {
+    font-family: Poppins;
+    font-size: 14px;
+}
+
+.p-info h2 {
+    font-family: Poppins;
+}
+
+.p-info a {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+.p-info a:hover {
+    color: rgb(168, 168, 168);
+}
+
+.website-link {
+    margin-left: 10px;
 }
