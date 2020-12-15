@@ -1,0 +1,203 @@
+body {
+    margin:0px;
+    padding: 0px;
+    background-color: #161616;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+#main {
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: #edf1fd;
+    position: relative;
+    background-image: url("../img/ralphie.png");
+    background-repeat: no-repeat;
+    background-size: 600px;
+    background-position: right bottom;
+    box-shadow: inset 86em 0px 25px #edf1fd, inset 0px -46px 20px -5px #edf1fd;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 50px;
+    background-color: #f4f7ff;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.05);
+    z-index: 1;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li a {
+    padding: 10px 15px;
+    color: #6c707c;
+    font-size: 12px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #292929;
+    font-family: "Poppins";
+}
+
+.menu li a:hover, .active {
+    background-color: #292929;
+    color: #FFFFFF !important;
+    transition: all ease 0.4s;
+}
+
+.name {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 500px;
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    transform: translate(-20%, -50%);
+}
+
+.name p:nth-child(1),
+.name .details {
+    color: #6c707c;
+    font-size: 16px;
+}
+
+.name h1 {
+    font-family: "Moonglade DEMO";
+    font-size: 40px;
+    margin: 0px;
+    letter-spacing: 3px;
+    color: #292929;
+}
+
+.social {
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    display: flex;
+}
+
+.social a {
+    margin: 6px 12px;
+}
+
+.social i {
+    color: rgba(18, 17, 17, 0.4);
+    font-size: 16px;
+}
+
+.social a:hover i {
+    color: #000;
+    transition: all ease 0.5s;
+}
+
+.skills-text {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.skills-text h2 {
+    font-family: "Moonglade DEMO";
+    font-size: 36px;
+    margin: 0px;
+    letter-spacing: 3px;
+    color: #292929;
+}
+
+.skills-text p {
+    font-size: 16px;
+    color: #6c707c
+}
+
+#projects {
+    width: 100%;
+    box-sizing: border-box;
+    font-family: Poppins;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 2% 20px 2%;
+}
+
+.p-heading {
+    font-family: Poppins;
+    font-size: 1.7rem;
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: 400;
+    padding: 10px 20px;
+    background-color: #292929;
+    letter-spacing: 2px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.p-box {
+    background-color: #1f1f1f;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.p-b-container {
+    width: 90%;
+    height: 95vh;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.text-overlay {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(180, 180, 180);
+    opacity: 0.5;
+    display: none;
+}
+
+.text-overlay p {
+    color: #FFFFFF;
+    font-size: 1.4rem;
+    margin: 0px;
+    letter-spacing: 2px;
+}
+
+.p-box:hover .text-overlay {
+    display: flex;
+}
+
+.p-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
