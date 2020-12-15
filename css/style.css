@@ -16,6 +16,10 @@ a {
     text-decoration: none;
 }
 
+.toggle {
+    display: none;
+}
+
 #main {
     width: 100%;
     height: 100vh;
@@ -48,6 +52,10 @@ nav {
     z-index: 1;
 }
 
+.my-picture {
+    display: none;
+}
+
 .menu {
     display: flex;
 }
@@ -65,7 +73,8 @@ nav {
     font-family: "Poppins";
 }
 
-.menu li a:hover, .active {
+.menu li a:hover, 
+.menu li a.active {
     background-color: #292929;
     color: #FFFFFF !important;
     transition: all ease 0.4s;
@@ -244,4 +253,108 @@ nav {
 .contact-icons a:hover i {
     color: #000;
     transition: all ease 0.5s;
+}
+
+@media(max-width: 1190px){
+    #main {
+        background-size: 425px;
+        box-shadow: inset 42em 0px 25px #edf1fd, inset 0px -46px 20px -5px #edf1fd;
+    }
+
+    .name {
+        left: 10%;
+        top: 50%;
+        transform: translate(-10%, -50%);
+    }
+    
+    .my-picture {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .my-img {
+        width: 300px;
+    }
+}
+
+@media(max-width: 970px){
+    #main {
+        background-image: none !important;
+    }
+
+    .name {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media(max-width: 900px){
+    .toggle {
+        display: block;
+    }
+
+    .toggle:before {
+        content: "\f0c9";
+        font-family: "Font Awesome 5 Free";
+        line-height: 0px;
+        margin-left: -35px;
+    }
+
+    .toggle.active:before {
+        content: "\f00d";
+    }
+
+    nav {
+        padding: 10px 30px;
+    }
+
+    nav ul {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        background-color: #0f0f0f;
+        top: 50px;
+        left: 0;
+        transition: 0.5s;
+        overflow: hidden;
+        border: 3px solid #1f1f1f;
+        display: none !important;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    nav ul li a {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px !important;
+        padding: 0px !important;
+    }
+
+    .active-menu {
+        display: block !important;
+    }
+
+    .p-b-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        height: auto;
+        grid-gap: 10px;
+    }
+}
+
+@media(max-width: 600px){
+    .p-b-container {
+        grid-template-columns: 1fr;
+    }
+
+    .name {
+        width: 60%;
+    }
 }
